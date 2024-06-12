@@ -3,12 +3,13 @@ import NewPlantForm from "./NewPlantForm";
 import PlantList from "./PlantList";
 import Search from "./Search";
 
-function PlantPage() {
+function PlantPage({plants,handleAddPlant, setSearching, searching}) {
+
   return (
     <main>
-      <NewPlantForm />
-      <Search />
-      <PlantList />
+      <NewPlantForm handleAddPlant={handleAddPlant}/>
+      <Search searching={searching} setSearching={setSearching} />
+      <PlantList plants={plants} />
     </main>
   );
 }
